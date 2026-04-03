@@ -1,7 +1,7 @@
 - name: "play level variables"
   hosts: "localhost"
   vars_files:
-  - vars_files
+  - var_file.yaml
   tasks:
     - name: " print course information"
       ansible.builtin.debug:
