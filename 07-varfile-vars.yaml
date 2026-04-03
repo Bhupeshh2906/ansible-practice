@@ -17,6 +17,6 @@
     
     - name: " print course information"
       vars_files:
-        - var_file.yaml
+      - var_file.yaml
       ansible.builtin.debug:
         msg: "Hello {{ course }}, the course duration is {{ duration }} and the trainer is {{ trainer }}."
