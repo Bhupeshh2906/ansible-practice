@@ -1,5 +1,6 @@
 - name: "Inventory variables"
   hosts: "local"
+  connection: "local"
   tasks: 
     - name: "msg with inventory variables"
       ansible.builtin.debug:
