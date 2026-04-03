@@ -1,0 +1,21 @@
+- name: "Multi plays -Play1"
+  hosts: "localhost"
+  tasks:
+    - name: "msg from play1 to task1"
+      ansible.builtin.debug:
+        msg: "hello from play1 to task1"
+    
+    - name: "msg from play1 to task2"
+      ansible.builtin.debug:
+        msg: "hello from play1 to task2"
+
+- name: "Multi plays -Play2"
+  hosts: "localhost"
+  tasks:
+    - name: "msg from play2 to task1"
+      ansible.builtin.debug:
+        msg: "hello from play2 to task1"
+    
+    - name: "msg from play2 to task2"
+      ansible.builtin.debug:
+        msg: "hello from play2 to task2"
