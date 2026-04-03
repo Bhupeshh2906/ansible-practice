@@ -1,0 +1,16 @@
+- name: "play level variables"
+  hosts: "localhost"
+  vars:
+    course: "Devops with AWS"
+    duration: "10HRS"
+    trainer: "Siva kumar"
+  tasks:
+    - name: " print course information"
+      vars:
+        course: "ansible"
+      ansible.builtin.debug:
+        msg: "Hello {{ course }}, the course duration is {{ duration }} and the trainer is {{ trainer }}."
+
+    - name: " print course information"
+      ansible.builtin.debug:
+        msg: "Hello {{ course }}, the course duration is {{ duration }} and the trainer is {{ trainer }}."
