@@ -1,0 +1,16 @@
+- name: "conditons demo"
+  hosts: "localhost"
+  vars:
+    number: 78
+  tasks:
+    - name: "printing the condition number is less than or equal to 100"
+      ansible.builtin.debug:
+        msg: "The number {{ number }} is less than or equal to 100 "
+      when:
+        number <= 100
+    
+    - name: "printing the condition number is greater than 100"
+      ansible.builtin.debug:
+        msg: "The number {{ number }} is greater than 100 "
+      when:
+        number > 100
