@@ -1,0 +1,14 @@
+- name: "loops"
+  hosts: "localhost"
+  tasks:
+    - name: "Print names with loops"
+      ansible.builtin.debug:
+        msg: "My name is {{ item }}"
+      loop:
+      - "Gnana"
+      - "prasunna"
+      - "Bhupeshh"
+      - "Madan" 
+      - "Mohan"
+      - "Vijaya"
+
