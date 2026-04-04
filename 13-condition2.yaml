@@ -1,0 +1,17 @@
+- name: "Playbook control using ansible facts"
+  hosts: frontend
+  tasks:
+
+    - name: "Install nginx if redhat"
+      ansible.builtin.dnf:
+        - name: nginx
+          state: present
+      when:
+        ansible_facts = "RedHat"
+    
+    - name: "Install nginx if ubuntu"
+      ansible.builtin.apt:
+        - name: nginx
+          state: present
+      when:
+        ansible_facts = "Ubuntu"
