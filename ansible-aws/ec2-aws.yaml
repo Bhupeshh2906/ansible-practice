@@ -2,10 +2,9 @@ plugin: amazon.aws.ec2
 regions:
   - us-east-1
 filters:
-  tag:
-    environment: "dev"
+  tag:environment: "dev"
 keyed_groups:
   - key: tags.Name
     prefix: instance
 hostnames:
- - private-ip-address
+  - private-ip-address
