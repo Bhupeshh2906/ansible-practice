@@ -7,3 +7,5 @@ filters:
 keyed_groups:
   - key: tags.Name
     prefix: instance
+hostnames:
+ - private-ip-address
